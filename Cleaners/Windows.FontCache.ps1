@@ -9,4 +9,4 @@ $path = @(
     "$env:SystemRoot\System32\FNTCACHE.DAT",
     "$env:LOCALAPPDATA\GDIPFONTCACHEV1.DAT"
 )
-$path | ForEach-Object { (Test-Path -Path $_ -PathType Leaf) -and (Remove-Item -Path $_ -Force) }
+$path | ForEach-Object { $null = (Test-Path -Path $_ -PathType Leaf) -and (Remove-Item -Path $_ -Force) }

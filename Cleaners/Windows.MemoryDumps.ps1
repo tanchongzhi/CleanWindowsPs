@@ -3,7 +3,7 @@ $ErrorActionPreference = 'SilentlyContinue'
 Write-Host 'Cleaning Windows Memory Dumps...'
 
 $path = "$env:SystemRoot\memory.dmp"
-(Test-Path -Path $path -PathType Leaf) -and (Remove-Item -Path $path -Force)
+$null = (Test-Path -Path $path -PathType Leaf) -and (Remove-Item -Path $path -Force)
 
 $path = @(
     "$env:SystemRoot\Minidump\*.dmp",

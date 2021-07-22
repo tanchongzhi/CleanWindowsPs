@@ -14,4 +14,4 @@ $path = @(
 Get-ChildItem -Path $path -Force | Where-Object { -not $_.PSIsContainer } | Remove-Item -Force
 
 $path = "$env:LOCALAPPDATA\Microsoft\Windows\WebCache.old"
-(Test-Path -Path $path -PathType Leaf) -and (Remove-Item -Path $path -Force)
+$null = (Test-Path -Path $path -PathType Leaf) -and (Remove-Item -Path $path -Force)

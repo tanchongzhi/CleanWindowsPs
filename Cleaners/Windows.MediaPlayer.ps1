@@ -34,4 +34,4 @@ $path = "$env:LOCALAPPDATA\Microsoft\Media Player\cacheentry*.*"
 Get-ChildItem -Path $path -Force | Where-Object { -not $_.PSIsContainer } | Remove-Item -Force
 
 $path = "$env:LOCALAPPDATA\Microsoft\Media Player\lastplayed.wpl"
-(Test-Path -Path $path -PathType Leaf) -and (Remove-Item -Path $path -Force)
+$null = (Test-Path -Path $path -PathType Leaf) -and (Remove-Item -Path $path -Force)
