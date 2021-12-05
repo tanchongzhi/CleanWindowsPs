@@ -17,5 +17,7 @@
 .\Invoke-Cleaner.ps1 -Name Windows.TemporaryFiles
 .\Invoke-Cleaner.ps1 -Name Windows.InternetExplorer.*
 
+.\Invoke-Cleaner.ps1 -File Selected.txt
+
 .\Invoke-Cleaner.ps1
 ```
