@@ -2,10 +2,7 @@ $ErrorActionPreference = "SilentlyContinue"
 
 Write-Host "Cleaning Windows Defender History..."
 
-$Path = @(
-    "$env:ProgramData\Microsoft\Windows Defender\Scans\History\Results\Quick\*",
-    "$env:ProgramData\Microsoft\Windows Defender\Scans\History\Results\Resource\*"
-)
+$Path = "$env:ProgramData\Microsoft\Windows Defender\Scans\History\*"
 Remove-Item -Path $Path -Recurse -Force
 
 $Path = "$env:ProgramData\Microsoft\Windows Defender\Support\*"
