@@ -1,6 +1,6 @@
 $ErrorActionPreference = "SilentlyContinue"
 
-Write-Host "Cleaning Python Pip Cache..."
+Write-Host "Cleaning Graddle Cache..."
 
 $Path = "$USERPROFILE\.graddle\caches"
 Remove-Item -Path $Path -Recurse -Force

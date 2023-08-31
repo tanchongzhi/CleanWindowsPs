@@ -1,6 +1,6 @@
 $ErrorActionPreference = "SilentlyContinue"
 
-Write-Host "Cleaning Python Npm Cache..."
+Write-Host "Cleaning Npm Cache..."
 
 $Path = @(
     "$APPDATA\npm-cache",
